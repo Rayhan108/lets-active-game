@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
   	extend: {
+        fontFamily: {
+                nunito: ['Nunito', 'sans-serif'],
+                poppins: ['Poppins', 'sans-serif'],
+                space: ['Space Grotesk', 'sans-serif'],
+            },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

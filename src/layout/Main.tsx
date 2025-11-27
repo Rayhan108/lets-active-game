@@ -1,5 +1,6 @@
 import MainHeader from "@/ui-components/MainHeader/MainHeader";
-import Sidebar from "@/ui-components/Sidebar/Sidebar";
+import { Sidebar } from "@/ui-components/Sidebar/Sidebar";
+
 import { useState } from "react";
 
 import { Outlet } from "react-router-dom";
@@ -11,20 +12,19 @@ const Main = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className=" h-[100%] text-white">
+        <div className=" h-[100%] text-white">
      <div>
-
+  
             <MainHeader toggleSidebar={toggleSidebar} />
      </div>
       {/* Main Content */}
-      <div className="flex gap-5 overflow-hidden min-h-screen w-[100%]">
+      <div className="flex  overflow-hidden min-h-screen w-[100%]">
        {/* Sidebar  */}
     <div className="w-[20%]">
-
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </div>
 
-          <div className="w-[100%] overflow-x-hidden overflow-y-auto  px-8 pt-3 bg-[#F4F5F9]">
+          <div className="w-[100%] overflow-x-hidden overflow-y-auto   bg-[#F4F5F9]">
           <Outlet></Outlet>
         </div>
   

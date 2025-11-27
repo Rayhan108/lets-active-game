@@ -1,11 +1,36 @@
-import React from 'react';
+import { EarningChart } from "@/ui-components/DashboardPage/EarningChart";
+import { GroupRatioChart } from "@/ui-components/DashboardPage/GroupRationChart";
+import { RecentActivity } from "@/ui-components/DashboardPage/RecentActivity";
+import { StatCards } from "@/ui-components/DashboardPage/StatCards";
 
 const DashboardPage = () => {
-    return (
-        <div>
-            <p className='text-black'>This is the dashboard page content.</p>
+  return (
+    <div className="flex bg-[#0d0d1a] text-white">
+      {/* Dashboard Content */}
+      <main className="flex-1 overflow-y-auto p-6 bg-[#0d0d1a]">
+        <div className="space-y-6">
+          {/* Stat Cards */}
+          <StatCards />
+
+          {/* Charts Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Earning Revenue Trend - Takes 2 columns */}
+            <div className="lg:col-span-2">
+              <EarningChart />
+            </div>
+
+            {/* Active & Inactive Group Ratio */}
+            <div className="lg:col-span-1">
+              <GroupRatioChart />
+            </div>
+          </div>
+
+          {/* Recent Activity */}
+          <RecentActivity />
         </div>
-    );
+      </main>
+    </div>
+  );
 };
 
 export default DashboardPage;
