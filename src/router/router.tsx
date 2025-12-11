@@ -3,6 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import PrivetRoutes from "./privetRoutes";
 import Main from "@/layout/Main";
 import DashboardPage from "@/pages/DashboardPage/DashboardPage";
+import AllUsers from "@/pages/AllUsers/AllUsers";
+
+
+
 
 
 
@@ -17,7 +21,7 @@ const authRoutes = [
 // Dashboard Routes (Private)
 const dashboardRoutes = [
   { index: true, element: <DashboardPage /> },
-//   { path: "userManagement", element: <UserManagement /> },
+  { path: "allUsers", element: <AllUsers/> },
 //   { path: "allOwner", element: <AllOwner /> },
 //   { path: "allProviders", element: <AllProvider /> },
 
