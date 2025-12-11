@@ -4,6 +4,14 @@ import PrivetRoutes from "./privetRoutes";
 import Main from "@/layout/Main";
 import DashboardPage from "@/pages/DashboardPage/DashboardPage";
 import AllUsers from "@/pages/AllUsers/AllUsers";
+import Avatar from "@/pages/Avatar/Avatar";
+import ReferralRewards from "@/pages/ReferralRewards/ReferralRewards";
+import Ads from "@/pages/Ads/Ads";
+import Admin from "@/pages/Admin/Admin";
+import Privacy from "@/pages/Privacy/Privacy";
+import Terms from "@/pages/Terms/Terms";
+import Contact from "@/pages/Contact/Contact";
+import Faq from "@/pages/Faq/Faq";
 
 
 
@@ -22,17 +30,20 @@ const authRoutes = [
 const dashboardRoutes = [
   { index: true, element: <DashboardPage /> },
   { path: "allUsers", element: <AllUsers/> },
-//   { path: "allOwner", element: <AllOwner /> },
-//   { path: "allProviders", element: <AllProvider /> },
+  { path: "avatar", element: <Avatar /> },
+  { path: "referralRewards", element: <ReferralRewards /> },
+  { path: "ads", element: <Ads /> },
+  { path: "admin", element: <Admin /> },
+
 
 ];
 
 // Settings Routes
 const settingRoutes = [
-//   { path: "setting/updateProfile", element: <Profile /> },
-//   { path: "setting/about", element: <About /> },
-//   { path: "setting/privacy", element: <Privacy /> },
-//   { path: "setting/terms", element: <Terms /> },
+  { path: "settings/privacy", element: <Privacy /> },
+  { path: "settings/terms", element: <Terms /> },
+  { path: "settings/contact", element: <Contact /> },
+  { path: "settings/faq", element: <Faq /> },
 ];
 
 const router = createBrowserRouter([

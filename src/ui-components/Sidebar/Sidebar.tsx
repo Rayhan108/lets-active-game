@@ -10,6 +10,7 @@ import {
   LogOut,
   ChevronRight,
   ChevronDown,
+  Proportions
 } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -19,16 +20,17 @@ const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", to: "/" },
   { icon: Users, label: "All user", to: "/allUsers" },
   { icon: Ghost, label: "Avatar", to: "/avatar" },
-  { icon: Gift, label: "Referral Reward", to: "/referral-reward" },
+  { icon: Gift, label: "Referral Reward", to: "/referralRewards" },
+  { icon: Proportions, label: "Ads", to: "/ads" },
   { icon: Shield, label: "Admin", to: "/admin" },
   {
     icon: Settings,
     label: "Settings",
     hasSubmenu: true,
     submenuItems: [
-      { label: "Privacy policy", to: "/settings/privacy-policy" },
+      { label: "Privacy policy", to: "/settings/privacy" },
       { label: "Terms & Condition", to: "/settings/terms" },
-      { label: "Contact us", to: "/settings/contact-us" },
+      { label: "Contact us", to: "/settings/contact" },
       { label: "FAQ", to: "/settings/faq" },
     ],
   },
