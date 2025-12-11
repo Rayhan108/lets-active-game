@@ -24,7 +24,7 @@ const Main = () => {
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </div>
 
-          <div className="w-[100%] overflow-x-hidden overflow-y-auto   bg-[#F4F5F9]">
+          <div className="w-[100%] overflow-x-hidden overflow-y-auto bg-[#0D0D1A] ">
           <Outlet></Outlet>
         </div>
   

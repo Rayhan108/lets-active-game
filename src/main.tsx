@@ -5,9 +5,13 @@ import { RouterProvider } from 'react-router-dom'
 
 import './index.css'
 import router from './router/router'
+import { ConfigProvider } from 'antd'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+          <ConfigProvider>
+
     <RouterProvider router={router} />
+          </ConfigProvider>
   </React.StrictMode>,
 )

@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import PrivetRoutes from "./privetRoutes";
 import Main from "@/layout/Main";
 import DashboardPage from "@/pages/DashboardPage/DashboardPage";
-import AllUsers from "@/pages/AllUsers/AllUsers";
+
 import Avatar from "@/pages/Avatar/Avatar";
 import ReferralRewards from "@/pages/ReferralRewards/ReferralRewards";
 import Ads from "@/pages/Ads/Ads";
@@ -12,6 +12,8 @@ import Privacy from "@/pages/Privacy/Privacy";
 import Terms from "@/pages/Terms/Terms";
 import Contact from "@/pages/Contact/Contact";
 import Faq from "@/pages/Faq/Faq";
+import { AllUsers } from "@/pages/AllUsers/AllUsers";
+
 
 
 

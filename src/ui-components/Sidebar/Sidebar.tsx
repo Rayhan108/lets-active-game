@@ -59,7 +59,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
         <ul className="space-y-3">
           {menuItems.map((item) => (
             <li key={item.label}>
-              {/* ✅ Fixed: Separate handling for submenu and regular items */}
+              {/*  Fixed: Separate handling for submenu and regular items */}
               {item.hasSubmenu ? (
                 // Settings with submenu - just a button
                 <button
@@ -68,7 +68,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
                     "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors",
                     settingsOpen || isSettingsActive
                       ? "bg-[#292949] text-white"
-                      : "text-gray-400 hover:text-white hover:bg-[#1a1a2e]/50"
+                      : "text-white hover:bg-[#1a1a2e]/50"
                   )}
                 >
                   <item.icon className="w-5 h-5" />
@@ -82,7 +82,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
                   )}
                 </button>
               ) : (
-                // ✅ Regular menu items - wrapped with Link for navigation
+                //  Regular menu items - wrapped with Link for navigation
                 <Link to={item.to}>
                   <button
                     className={cn(
@@ -93,7 +93,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
                     )}
                   >
                     <item.icon className="w-5 h-5" />
-                    <span className="flex-1 text-left text-xl font-nunito">
+                    <span className="flex-1 text-white text-left text-xl font-nunito">
                       {item.label}
                     </span>
                   </button>
@@ -111,7 +111,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
                             "w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors",
                             isActive(subItem.to)
                               ? "text-white bg-[#292949]"
-                              : "text-gray-400 hover:text-white"
+                              : "text-white"
                           )}
                         >
                           <span
@@ -122,7 +122,7 @@ export function Sidebar({ toggleSidebar, isOpen }) {
                                 : "bg-gray-600"
                             )}
                           />
-                          <span className="flex-1 text-left text-xl font-nunito">
+                          <span className="flex-1 text-white text-left text-xl font-nunito">
                             {subItem.label}
                           </span>
                         </button>
